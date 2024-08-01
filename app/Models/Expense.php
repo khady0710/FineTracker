@@ -9,7 +9,6 @@ class Expense extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
         'category_id',
         'amount',
         'description',
@@ -17,6 +16,9 @@ class Expense extends Model
         'expense_date'
         ,'user_id',
 
+    ];
+    protected $casts = [
+        'expense_date' => 'date', // Cela assure que expense_date est traité comme une instance de Carbon
     ];
 
     public function user() {

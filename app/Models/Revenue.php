@@ -9,14 +9,15 @@ class Revenue extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
         'amount',
         'description',
         'is_recurrent',
         'revenue_date','user_id',
 
     ];
-
+    protected $casts = [
+        'revenue_date' => 'date',
+    ];
     public function user() {
         return $this->belongsTo(User::class);
     }

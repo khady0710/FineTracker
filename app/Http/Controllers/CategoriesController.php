@@ -6,12 +6,12 @@ use Illuminate\Http\Request;
 use \App\Models\Category;
 class CategoriesController extends Controller
 {
-    public function index () {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));}
+    public function index()
+    {
+        $userId = auth()->id(); // Obtenez l'ID de l'utilisateur connecté
+        $categories = Category::where('user_id', $userId)->get(); // Récupérez les catégories associées à l'utilisateur
 
-    public function create (){
-        return view('categories.create');
+        return view('categories.index', compact('categories'));
     }
 
     public function store (Request $request) {
