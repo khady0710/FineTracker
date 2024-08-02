@@ -15,11 +15,8 @@ use \App\Http\Controllers\RevenuesController;
 |
 */
 
-Route::get('/home', function () {
-    return view('welcome');
-});
 Route::get('/', function () {
-    return view('register');
+    return view('welcome');
 });
 
 Route::middleware('auth')->group(function () {
