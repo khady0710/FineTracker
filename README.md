@@ -77,6 +77,25 @@ L'application sera accessible à `http://127.0.0.1:8000`.
 - **Authentification :** Inscription, connexion et gestion des sessions utilisateur.
 - **Interface Utilisateur :** Conçue avec Bootstrap pour une interface propre et reactive.
 
+## Clonage et Exécution Locale
+Cloner le dépôt :
+
+bash
+Copier le code
+git clone https://github.com/votre-utilisateur/finetracker.git
+Naviguer dans le répertoire du projet :
+
+bash
+Copier le code
+cd finetracker
+Suivez les étapes d'installation et de configuration mentionnées ci-dessus.
+
+Lancer le serveur de développement :
+
+bash
+Copier le code
+php artisan serve
+
 ## Utilisation
 
 1. **Inscription et Connexion :**
