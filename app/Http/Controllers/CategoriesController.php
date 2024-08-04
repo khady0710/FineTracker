@@ -14,6 +14,13 @@ class CategoriesController extends Controller
         return view('categories.index', compact('categories'));
     }
 
+
+    public function create()
+    {
+        // Afficher le formulaire de création de revenu
+        return view('categories.create');
+    }
+
     public function store (Request $request) {
         $request->validate([
             'name' => 'required|string|max:255',
